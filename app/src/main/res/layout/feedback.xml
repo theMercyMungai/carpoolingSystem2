@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/carbackground"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".login">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
+
+        />
 
     <TextView
         android:id="@+id/feedback"
@@ -15,12 +23,13 @@
         android:textColor="@color/black"
         android:textSize="35dp"
         android:layout_margin="50dp"
+        android:layout_below="@+id/back"
         android:textAlignment="center"
         />
 
     <TextView
         android:id="@+id/feedbackreason"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/feedback"
         android:layout_marginStart="50dp"
@@ -34,7 +43,8 @@
         android:textSize="20dp" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:id="@+id/rude"
         android:layout_below="@+id/feedbackreason"
@@ -45,10 +55,11 @@
         android:padding="20dp"
         />
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/late"
         android:layout_below="@+id/rude"
+        android:layout_centerHorizontal="true"
         android:text="Driver was late "
         android:background="#30ffffff"
         android:textColor="@color/black"
@@ -56,14 +67,14 @@
         android:padding="20dp"
         />
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/money"
         android:layout_below="@+id/late"
-        android:hint="Driver asked for more money "
+        android:layout_centerHorizontal="true"
+        android:text="Driver asked for more money "
         android:background="#30ffffff"
-        android:textColor="@color/white"
-        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:layout_margin="10dp"
         android:padding="20dp"
         />
@@ -74,7 +85,7 @@
         android:id="@+id/ok"
         android:layout_below="@id/money"
         android:text="Done"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:backgroundTint="@color/teal_700"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"

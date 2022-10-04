@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2128205128205128" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/drawable/ic_baseline_edit_location_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/drawable/ic_car.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_customer_login.xml" value="0.1859375" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_driver_map.xml" value="0.19519927536231885" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/cardetails.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_map.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/cardetails.xml" value="0.22" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/cardetailsview.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/confirmcode.xml" value="0.21" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/customerdetails.xml" value="0.25" />
@@ -13,9 +19,22 @@
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/feedback.xml" value="0.25" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/forgotpassword.xml" value="0.21" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/forgotpassword2.xml" value="0.21" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/fragment_notification.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/fragment_setttings.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/homepage.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/login.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/passengerlist.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/profilepage.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/signup.xml" value="0.25" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/signupcustomer.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/signupdriver.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/staffstudent.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/startpage.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/tripdetails.xml" value="0.21" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21614583333333334" />
       </map>
     </option>
   </component>

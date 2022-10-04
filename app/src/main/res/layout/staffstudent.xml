@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".login">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/choose"
@@ -20,9 +17,9 @@
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/driver"
+        android:id="@+id/staff"
         android:layout_below="@id/choose"
-        android:text="Driver"
+        android:text="Staff"
         android:backgroundTint="@color/teal_700"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
@@ -30,9 +27,9 @@
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/customer"
-        android:layout_below="@id/driver"
-        android:text="Customer"
+        android:id="@+id/student"
+        android:layout_below="@id/staff"
+        android:text="Student"
         android:backgroundTint="@color/teal_700"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"

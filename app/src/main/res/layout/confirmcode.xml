@@ -2,10 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/carbackground"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
+
+        />
     <TextView
         android:id="@+id/confirmcode"
         android:layout_width="match_parent"
@@ -15,23 +23,25 @@
         android:textSize="35dp"
         android:layout_margin="50dp"
         android:textAlignment="center"
+        android:layout_below="@+id/back"
         />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:id="@+id/code"
         android:layout_below="@+id/confirmcode"
         android:hint="Enter Code"
-        android:background="#30ffffff"
+        android:background="#ffffff"
         android:textColor="@color/black"
+        android:textColorHint="@color/teal_700"
         android:backgroundTint="#5555"
-        android:textColorHint="@color/black"
         android:layout_margin="10dp"
         android:padding="20dp"
         />
     <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/confirmcodebtn"
         android:layout_below="@id/code"

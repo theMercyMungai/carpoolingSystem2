@@ -12,7 +12,7 @@ public class customerdriver extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.customerdriver);
 
         inDriver =(Button) findViewById(R.id.driver);
         inCustomer =(Button) findViewById(R.id.customer);
@@ -20,7 +20,16 @@ public class customerdriver extends AppCompatActivity {
         inDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(customerdriver.this, signUp.class);
+                Intent intent = new Intent(customerdriver.this, login.class);
+                startActivity(intent);
+                finish();
+                return;
+            }
+        });
+        inCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(customerdriver.this, CustomerLoginActivity.class);
                 startActivity(intent);
                 finish();
                 return;
