@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trip details"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_margin="50dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/destination"
+        android:layout_below="@+id/trip"
+        android:hint="Destination"
+        android:backgroundTint="#5555"
+        android:background="#30ffffff"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/carseatsbooked"
+        android:layout_below="@+id/destination"
+        android:hint="Book * seats"
+        android:backgroundTint="#5555"
+        android:background="#30ffffff"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/leavingtime"
+        android:layout_below="@+id/carseatsbooked"
+        android:hint="Leaving time "
+        android:background="#30ffffff"
+        android:backgroundTint="#5555"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:layout_below="@id/leavingtime"
+        android:text="Book"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>

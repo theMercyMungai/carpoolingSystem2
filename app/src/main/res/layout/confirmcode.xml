@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/carbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/confirmcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Code"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_margin="50dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/code"
+        android:layout_below="@+id/confirmcode"
+        android:hint="Enter Code"
+        android:background="#30ffffff"
+        android:textColor="@color/black"
+        android:backgroundTint="#5555"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmcodebtn"
+        android:layout_below="@id/code"
+        android:textColor="@color/white"
+        android:text="Confirm Code"
+        android:backgroundTint="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+</RelativeLayout>

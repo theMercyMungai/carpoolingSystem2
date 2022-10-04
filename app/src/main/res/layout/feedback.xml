@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_margin="50dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/feedbackreason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Please choose one"
+        android:backgroundTint="#5555"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rude"
+        android:layout_below="@+id/feedbackreason"
+        android:text="Poor service/ Driver was rude"
+        android:background="#30ffffff"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/late"
+        android:layout_below="@+id/rude"
+        android:text="Driver was late "
+        android:background="#30ffffff"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/money"
+        android:layout_below="@+id/late"
+        android:hint="Driver asked for more money "
+        android:background="#30ffffff"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:layout_below="@id/money"
+        android:text="Done"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468671214626",
+    "project_id": "car-pooling-system-2c627",
+    "storage_bucket": "car-pooling-system-2c627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468671214626:android:f8737a019fd1acc6dc067b",
+        "android_client_info": {
+          "package_name": "com.example.carpoolingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468671214626-pb3mvemlb6j7qgtf978oqgeubp1gnjon.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVu9ga9WvmlYtrNbSrbzUSEhMQFCLnb6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468671214626-pb3mvemlb6j7qgtf978oqgeubp1gnjon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

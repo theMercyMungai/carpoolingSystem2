@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbackground"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/cardetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car details"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_margin="50dp"
+        android:textAlignment="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPlate"
+        android:layout_below="@+id/cardetails"
+        android:hint="Number Plate"
+        android:background="#80fffff"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberPlate"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+
+        android:hint="Destination"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/carSeats"
+        android:layout_below="@+id/destination"
+        android:hint="Car Seats Available"
+        android:background="#30ffffff"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadCardetails"
+        android:layout_below="@id/carSeats"
+        android:text="Upload"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+
+</RelativeLayout>
