@@ -30,7 +30,7 @@ public class signupcustomer extends AppCompatActivity {
         insignupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signupcustomer.this, login.class);
+                Intent intent = new Intent(signupcustomer.this, CustomerMapActivity.class);
                 startActivity(intent);
                 finish();
                 return;

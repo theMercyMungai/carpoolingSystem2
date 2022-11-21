@@ -11,7 +11,7 @@
         android:id="@+id/choose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose"
+        android:text="Choose one "
         android:textColor="@color/black"
         android:textSize="35dp"
         android:layout_margin="50dp"
@@ -19,21 +19,24 @@
         />
     <Button
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:id="@+id/driver"
+        android:textSize="20dp"
         android:layout_below="@id/choose"
         android:text="Driver"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/sunglow"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_margin="50dp"
+        android:drawablePadding="0dp"
         />
     <Button
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:id="@+id/customer"
+        android:textSize="20dp"
         android:layout_below="@id/driver"
         android:text="Customer"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/middlebluegreen"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />

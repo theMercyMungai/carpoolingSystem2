@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class startpage extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIMEOUT=2000;
 
     @Override
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, customerdriver.class);
+                Intent intent = new Intent(startpage.this, customerdriver.class);
                 startActivity (intent);
                 finish();
 

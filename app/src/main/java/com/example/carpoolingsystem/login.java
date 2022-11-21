@@ -58,20 +58,8 @@ public class login extends AppCompatActivity {
         inregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String email = inemail.getText().toString();
-                final String password = inpassword.getText().toString();
-                inAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(login.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(!task.isSuccessful()) {
-                           Toast.makeText(login.this, "sign up error", Toast.LENGTH_SHORT).show();
-                        } else{
-                            String user_id = inAuth.getCurrentUser().getUid();
-                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
-                            current_user_db.setValue(true);
-                        }
-                    }
-                });
+                Intent intent = new Intent(login.this,customerdriver.class);
+                startActivity(intent);
             }
         });
 
@@ -84,10 +72,20 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful()) {
-                            Toast.makeText(login.this, "sign up error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(login.this, "user does not exist", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent intent = new Intent(login.this,DriverMapActivity.class);
+                            startActivity(intent);
                         }
                     }
                 });
+            }
+        });
+        inforgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this,customerdriver.class);
+                startActivity(intent);
             }
         });
 

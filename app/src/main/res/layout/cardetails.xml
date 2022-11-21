@@ -4,16 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1111"
+    android:background="@color/white"
     tools:context=".login">
 
-    <Button
-       android:id="@+id/back"
-       android:layout_width="50dp"
-       android:layout_height="wrap_content"
-       android:background="#111111"
-       android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
-        />
     <TextView
         android:id="@+id/cardetails"
         android:layout_width="match_parent"
@@ -21,10 +14,9 @@
         android:text="Car details"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:background="@color/teal_700"
+        android:background="@color/sunglow"
         android:layout_margin="50dp"
         android:textAlignment="center"
-        android:layout_below="@id/back"
         />
 
     <EditText
@@ -37,13 +29,13 @@
         android:layout_marginEnd="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:hint="Number Plate"
         android:drawableLeft="@drawable/ic_car"
         android:drawablePadding="20dp"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/teal_700" />
+        android:textColorHint="@color/sunglow" />
 
     <EditText
         android:id="@+id/destination"
@@ -54,14 +46,14 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:layout_centerHorizontal="true"
         android:hint="Destination"
         android:drawableLeft="@drawable/ic_baseline_edit_location_24"
         android:drawablePadding="20dp"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/teal_700" />
+        android:textColorHint="@color/sunglow" />
     <EditText
         android:layout_width="300dp"
         android:layout_centerHorizontal="true"
@@ -71,9 +63,9 @@
         android:hint="Car Seats Available"
         android:drawableLeft="@drawable/ic_baseline_event_seat_24"
         android:drawablePadding="20dp"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:textColor="@color/black"
-        android:textColorHint="@color/teal_700"
+        android:textColorHint="@color/sunglow"
         android:layout_margin="10dp"
         android:padding="20dp"
 
@@ -86,7 +78,7 @@
         android:layout_below="@id/carSeats"
         android:text="Save"
         android:textColor="@color/white"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/maizecroyola"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />
