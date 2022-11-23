@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backdrop4"
-    tools:context=".CustomerLoginActivity">
-
+    android:background="@drawable/backdrop11"
+    tools:context=".adminLogin">
 
     <TextView
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log in Customer"
+        android:text="Log in Admin"
         android:textColor="@color/white"
-        android:textSize="42dp"
+        android:textSize="50dp"
         android:layout_margin="50dp"
         android:textAlignment="center"
         />
@@ -58,8 +57,8 @@
         android:text="Log in"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:backgroundTint="@color/maizecroyola"
-        android:background="@color/maizecroyola"
+        android:backgroundTint="@color/middlebluegreen"
+        android:background="@color/middlebluegreen"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />

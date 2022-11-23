@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backdrop10"
+    tools:context=".driverLandingPage">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elegantTextHeight="true"
+        android:padding="40dp"
+        android:text="Welcome Driver"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/offerarider"
+        android:layout_width="wrap_content"
+        android:layout_height="165dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="456dp"
+        android:text="Offer a ride"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="162dp"
+        android:layout_height="170dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="380dp"
+        android:text="Settings"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/becomeacustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="174dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="264dp"
+        android:text="Become a customer"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/cardetails"
+        android:layout_width="163dp"
+        android:layout_height="193dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="133dp"
+        android:text="Car Details"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="171dp"
+        android:layout_height="175dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="61dp"
+        android:text="Logout"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

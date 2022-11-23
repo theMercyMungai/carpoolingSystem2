@@ -99,19 +99,33 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
 
     private void getAssignedCustomerPickupLocation(){
         DatabaseReference assignedCustomerPickupLocationRef = FirebaseDatabase.getInstance().getReference().child("customerRequest").child(customerId).child("1");
-        assignedCustomerPickupLocationRef.addValueEventListener(new ValueEventListener() {
+        ValueEventListener valueEventListener = assignedCustomerPickupLocationRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    Map<String, Object> map = (Map<String, Object>) snapshot.getValue();
-                    if(map.get("customerRideId") != null){
-                        customerId = map.get("customerRideId").toString();
-                        getAssignedCustomerPickupLocation();
+                if (snapshot.exists()) {
+                    List<Object> map = List <Object> snapshot.getValue();
+                    double locationLat = 0;
+                    double locationLng = 0;
+
+                    inRequest.setText("Driver found.");
+
+                    if(map.get(0) != null){
+                        locationLat = Double.parseDouble(map.get(0).toString());
                     }
+                    if(map.get(0) != null){
+                        locationLng = Double.parseDouble(map.get(1).toString());
+                    }
+                    LatLng driverLatLng = new LatLng(locationLat,locationLng);
+                    if(inDriverMarker !=null){
+                        inDriverMarker.remove();
+                    }
+                    inDriverMarker = mMap.addMarker(new MarkerOptions().position(driverLatLng).title("Your Driver"));
+
+
                 }
             }
-
-            @Override
+        };
+        @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }

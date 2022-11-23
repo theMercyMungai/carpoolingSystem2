@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/backdrop4"
     tools:context=".login">
 
     <TextView
@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Choose one "
-        android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:textSize="50dp"
         android:layout_margin="50dp"
         android:textAlignment="center"
         />
@@ -27,7 +27,6 @@
         android:backgroundTint="@color/sunglow"
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp"
-        android:drawablePadding="0dp"
         />
     <Button
         android:layout_width="300dp"
@@ -36,9 +35,20 @@
         android:textSize="20dp"
         android:layout_below="@id/driver"
         android:text="Customer"
-        android:backgroundTint="@color/middlebluegreen"
+        android:backgroundTint="@color/maizecroyola"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:id="@+id/admin"
+        android:textSize="20dp"
+        android:layout_below="@id/customer"
+        android:text="Admin"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/midnightblue"
+        android:layout_margin="50dp"
         />
 
 </RelativeLayout>

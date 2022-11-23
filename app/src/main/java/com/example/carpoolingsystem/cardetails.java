@@ -25,7 +25,7 @@ public class cardetails extends AppCompatActivity {
         inuploadCarDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(cardetails.this, signupdriver.class);
+                Intent intent = new Intent(cardetails.this, driverLandingPage.class);
                 startActivity(intent);
                 finish();
                 return;
