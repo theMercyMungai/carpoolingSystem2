@@ -55,7 +55,7 @@ public class login extends AppCompatActivity {
         inregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login.this,customerdriver.class);
+                Intent intent = new Intent(login.this,signupdriver.class);
                 startActivity(intent);
             }
         });

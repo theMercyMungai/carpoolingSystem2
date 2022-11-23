@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.carpoolingsystem">
+    package="com.example.carpoolingsystem" >
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -10,8 +10,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -20,7 +22,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/beba_carpool_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BebaCarpool">
+        android:theme="@style/Theme.BebaCarpool" >
         <activity
             android:name=".adminViewReports"
             android:exported="false" />
@@ -80,11 +82,14 @@
             android:name=".signupdriver"
             android:exported="true" />
         <activity
+            android:name=".cardetails"
+            android:exported="true" />
+        <activity
             android:name=".MapActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

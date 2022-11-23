@@ -51,6 +51,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.firebase:geofire-android:3.2.0'
     implementation 'com.firebase:geofire-android-common:3.2.0'
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
 }
 apply plugin:'com.google.gms.google-services'

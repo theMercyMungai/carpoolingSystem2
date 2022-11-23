@@ -43,7 +43,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.List;
 
-public class CustomerMapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,com.google.android.gms.location.LocationServices {
+public class CustomerMapActivity extends FragmentActivity implements OnMapReadyCallback,
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private GoogleMap mMap;
     private ActivityCustomerMapBinding binding;
@@ -232,44 +233,50 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         inGoogleApiClient.connect();
     }
 
+//    @Override
+//    public void onLocationChanged(Location location) {
+//        inLastLocation = location;
+//
+//        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+//
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+//        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+//
+//    }
+//
+//    @Override
+//  public void onConnected(Bundle bundle) {
+//       inLocationRequest = new LocationRequest();
+//       inLocationRequest.setInterval(1000);
+//       inLocationRequest.setFastestInterval(1000);
+//       inLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//
+//            return;
+//        }
+//       LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
+//
+//
+//   }
+
     @Override
-    public void onLocationChanged(Location location) {
-        inLastLocation = location;
-
-        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+    public void onConnected(@Nullable Bundle bundle) {
 
     }
 
     @Override
-  public void onConnected(Bundle bundle) {
-       inLocationRequest = new LocationRequest();
-       inLocationRequest.setInterval(1000);
-       inLocationRequest.setFastestInterval(1000);
-        inLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+    public void onConnectionSuspended(int i) {
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+    }
 
-            return;
-        }
-       LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
-       @Override
-       public void onConnectionSuspended ( int i){
+    }
 
-        }
-
-       @Override
-      public void onConnectionFailed (@NonNull ConnectionResult connectionResult){
-
-        }
-
-        @Override
-        protected void onStop() {
-            super.onStop();
-       }
-
-   }
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 }

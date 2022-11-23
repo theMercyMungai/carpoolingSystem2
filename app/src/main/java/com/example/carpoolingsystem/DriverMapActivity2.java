@@ -16,6 +16,7 @@ import android.widget.Button;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
+import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,7 +35,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.List;
 import java.util.Map;
 
-public class DriverMapActivity2 extends FragmentActivity implements com.google.android.gms.location.LocationServices, DriverMapActivity {
+public class DriverMapActivity2 extends FragmentActivity implements
+         DriverMapActivity {
 
     private GoogleMap mMap;
     private ActivityCustomerMapBinding binding;
@@ -45,6 +47,7 @@ public class DriverMapActivity2 extends FragmentActivity implements com.google.a
     private Button inLogout;
     private String customerId = "";
     private Object List;
+    private java.lang.Object Object;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +83,7 @@ public class DriverMapActivity2 extends FragmentActivity implements com.google.a
                     Map<String, Object> map = (Map<String, Object>) snapshot.getValue();
                     if(map.get("customerRideId") != null){
                         customerId = snapshot.getValue().toString();
-                        getAssignedCustomerPickupLocation();
+//                        getAssignedCustomerPickupLocation();
                     }
                 }
             }
@@ -92,39 +95,34 @@ public class DriverMapActivity2 extends FragmentActivity implements com.google.a
         });
     }
 
-    private void getAssignedCustomerPickupLocation(){
-        DatabaseReference assignedCustomerPickupLocationRef = FirebaseDatabase.getInstance().getReference().child("customerRequest").child(customerId).child("1");
-        ValueEventListener valueEventListener = assignedCustomerPickupLocationRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    List<Object> map = List < Object > snapshot.getValue();
-                    double locationLat = 0;
-                    double locationLng = 0;
-
-                    if (map.get(0) != null) {
-                        locationLat = Double.parseDouble(map.get(0).toString());
-                    }
-                    if (map.get(0) != null) {
-                        locationLng = Double.parseDouble(map.get(1).toString());
-                    }
-                    LatLng driverLatLng = new LatLng(locationLat, locationLng);
-
-                }
-                LatLng driverLatLng = null;
-                mMap.addMarker(new MarkerOptions().position(driverLatLng).title("Pickup Location"));
-
-
-            }
-
-    });
-        @Override
-            public void onCancelled(@NonNull DatabaseError error){
-
-            }
-        });
-
-    }
+//    private void getAssignedCustomerPickupLocation(){
+//        DatabaseReference assignedCustomerPickupLocationRef = FirebaseDatabase.getInstance().getReference().child("customerRequest").child(customerId).child("1");
+//        ValueEventListener valueEventListener = assignedCustomerPickupLocationRef.addValueEventListener(new ValueEventListener()); {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.exists()) {
+//                    List<Object> map = List < Object> snapshot.getValue();
+//                    double locationLat = 0;
+//                    double locationLng = 0;
+//
+//                    if (map.get(0) != null) {
+//                        locationLat = Double.parseDouble(map.get(0).toString());
+//                    }
+//                    if (map.get(0) != null) {
+//                        locationLng = Double.parseDouble(map.get(1).toString());
+//                    }
+//                    LatLng driverLatLng = new LatLng(locationLat, locationLng);
+//
+//                }
+//                LatLng driverLatLng = null;
+//                mMap.addMarker(new MarkerOptions().position(driverLatLng).title("Pickup Location"));
+//
+//
+//            }
+//
+//    });
+//
+//}
 
 
 
@@ -184,36 +182,46 @@ public class DriverMapActivity2 extends FragmentActivity implements com.google.a
 
     @Override
     public void onConnected(Bundle bundle) {
-        inLocationRequest = new LocationRequest();
-        inLocationRequest.setInterval(1000);
-        inLocationRequest.setFastestInterval(1000);
-        inLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        
+    }
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//    @Override
+//    public void onConnected(Bundle bundle) {
+//        inLocationRequest = new LocationRequest();
+//        inLocationRequest.setInterval(1000);
+//        inLocationRequest.setFastestInterval(1000);
+//        inLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//
+//            return;
+//        }
+//        LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
+//
+//
+//    }
 
-            return;
-        }
-        LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
+    @Override
+    public void onConnectionSuspended(int i) {
+        
+    }
 
-        @Override
-        public void onConnectionSuspended ( int i){
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
-        }
+    }
 
-        @Override
-        public void onConnectionFailed (@NonNull ConnectionResult connectionResult){
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
 
-        }
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Driver Available");
 
-        @Override
-        protected void onStop() {
-            super.onStop();
-            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Driver Available");
-
-            GeoFire geoFire = new GeoFire(ref);
-            geoFire.removeLocation(userId);
-        }
-
+        GeoFire geoFire = new GeoFire(ref);
+        geoFire.removeLocation(userId);
     }
 }

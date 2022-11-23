@@ -16,9 +16,10 @@ import android.widget.Toast;
 public class cardetails extends AppCompatActivity {
     private EditText innumberPlate, indestination, incarSeats;
     private Button inuploadCarDetails;
-    String[] item = {"5:30pm", "7:30pm", "8:30pm"};
-    AutoCompleteTextView autoCompleteTextView;
-    ArrayAdapter<String> adapterItems;
+//    String[] item = {"5:30pm", "7:30pm", "8:30pm"};
+//    AutoCompleteTextView autoCompleteTextView;
+//    ArrayAdapter<String> adapterItems;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +30,19 @@ public class cardetails extends AppCompatActivity {
         indestination = (EditText) findViewById(R.id.destination);
         incarSeats = (EditText) findViewById(R.id.carSeats);
         inuploadCarDetails = (Button) findViewById(R.id.uploadCardetails);
-        autoCompleteTextView = findViewById(R.id.leavingtimes);
+//        autoCompleteTextView = findViewById(R.id.leavingtimes);
 
-        adapterItems = new ArrayAdapter<String>(this,R.layout.leaving_times,item);
-        autoCompleteTextView.setAdapter(adapterItems);
-        autoCompleteTextView.setOnClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                String item = AdapterView(parent.getItemAtPosition(position).toString());
-
-                Toast.makeText(cardetails.this, "item"+ item, Toast.LENGTH_SHORT).show();
-            }
-        });
+//        adapterItems = new ArrayAdapter<String>(this,R.layout.leaving_times,item);
+//        autoCompleteTextView.setAdapter(adapterItems);
+//        autoCompleteTextView.setOnClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//                String item = AdapterView.(parent.getItemAtPosition(position).toString());
+//
+//                Toast.makeText(cardetails.this, "item"+ item, Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
         inuploadCarDetails.setOnClickListener(new View.OnClickListener() {

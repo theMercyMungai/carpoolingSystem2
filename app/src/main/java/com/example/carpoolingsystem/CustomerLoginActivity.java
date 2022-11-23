@@ -65,9 +65,13 @@ public class CustomerLoginActivity extends AppCompatActivity {
                         if(!task.isSuccessful()) {
                             Toast.makeText(CustomerLoginActivity.this, "sign up error", Toast.LENGTH_SHORT).show();
                         } else{
-                            String user_id = inAuth.getCurrentUser().getUid();
-                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(user_id);
-                            current_user_db.setValue(true);
+                            Intent intent = new Intent(CustomerLoginActivity.this, customerLandingPage.class);
+                            startActivity(intent);
+                            finish();
+                            return;
+       //                     String user_id = inAuth.getCurrentUser().getUid();
+        //                    DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(user_id);
+         //                   current_user_db.setValue(true);
                         }
                     }
                 });
@@ -83,7 +87,12 @@ public class CustomerLoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful()) {
-                            Toast.makeText(CustomerLoginActivity.this, "sign up error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerLoginActivity.this, "login error", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent intent = new Intent(CustomerLoginActivity.this, customerLandingPage.class);
+                            startActivity(intent);
+                            finish();
+                            return;
                         }
                     }
                 });
@@ -103,5 +112,20 @@ public class CustomerLoginActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         inAuth.addAuthStateListener(firebaseAuthListener);
+    }
+
+    public void setcustomerpassword(EditText inpassword) {
+    }
+
+    public void setcustomeremail(EditText inemail) {
+    }
+
+    public void setcustomerphonenumber(EditText inphoneNumber) {
+    }
+
+    public void setcustomerlastname(EditText inlastName) {
+    }
+
+    public void setcustomername(EditText infirstName) {
     }
 }
