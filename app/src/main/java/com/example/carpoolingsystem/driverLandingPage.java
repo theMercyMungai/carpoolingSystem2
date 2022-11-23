@@ -27,7 +27,7 @@ public class driverLandingPage extends AppCompatActivity {
         inofferaride.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(driverLandingPage.this,DriverMapActivity.class);
+                Intent intent = new Intent(driverLandingPage.this, DriverMapActivity2.class);
                 startActivity(intent);
                 finish();
                 return;

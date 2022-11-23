@@ -68,20 +68,47 @@
         android:textColorHint="@color/sunglow"
         android:layout_margin="10dp"
         android:padding="20dp"
-
         />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/carSeats"
+        android:id="@+id/leavingtimes"
+        android:layout_centerHorizontal="true"
+        android:scrollbarStyle="insideOverlay"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:hint="Select leaving times"
+        app:hintTextColor="@color/maizecroyola"
+        android:background="@color/white">
+
+        <AutoCompleteTextView
+            android:id="@+id/leavingtimesoptions"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Select leaving times"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="5dp"
+            android:inputType="none"
+            app:hintTextColor="@color/maizecroyola" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/uploadCardetails"
-        android:layout_below="@id/carSeats"
+        android:layout_below="@id/leavingtimes"
         android:text="Save"
         android:textColor="@color/white"
         android:backgroundTint="@color/maizecroyola"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />
+    
 
  <com.google.android.material.bottomnavigation.BottomNavigationView
      android:layout_width="match_parent"

@@ -11,6 +11,7 @@
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/drawable/ic_car.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_admin_landing_page.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_admin_login.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_admin_view_reports.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_customer_landing_page.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_customer_login.xml" value="0.1859375" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/activity_customer_map.xml" value="0.17346014492753623" />
@@ -31,6 +32,7 @@
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/fragment_notification.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/fragment_setttings.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/homepage.xml" value="0.2" />
+        <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/leaving_times.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/login.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/passengerlist.xml" value="0.2" />
         <entry key="..\:/Users/munga/AndroidStudioProjects/carpoolingSystem/app/src/main/res/layout/profilepage.xml" value="0.17300724637681159" />

@@ -158,7 +158,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
     private Marker inDriverMarker;
 
     private void getDriverLocation(){
-        DatabaseReference driverLocationRef = FirebaseDatabase.getInstance().getReference().child("driversWorking").child(driverFoundID).child("1");
+        DatabaseReference driverLocationRef = FirebaseDatabase.getInstance().getReference().child("Driver Working").child(driverFoundID).child("1");
         driverLocationRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -179,6 +179,23 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                     if(inDriverMarker !=null){
                         inDriverMarker.remove();
                     }
+                    Location loc1 = new Location("");
+                    loc1.setLatitude(pickupLocation.latitude);
+                    loc1.setLongitude(pickupLocation.longitude);
+
+                    Location loc2 = new Location("");
+                    loc2.setLatitude(driverLatLng.latitude);
+                    loc2.setLongitude(driverLatLng.longitude);
+
+                    float distance = loc1.distanceTo(loc2);
+
+                    if(distance<100){
+                        inRequest.setText("Driver has Arrived at Pickup ");
+                    }else
+                    {
+                        inRequest.setText("Driver Found: " + String.valueOf(distance));
+                    }
+
                     inDriverMarker = mMap.addMarker(new MarkerOptions().position(driverLatLng).title("Your Driver"));
 
                 }
@@ -188,7 +205,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        })
+        });
 
     }
 
@@ -227,32 +244,32 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
     }
 
     @Override
-    public void onConnected(Bundle bundle) {
-        inLocationRequest = new LocationRequest();
-        inLocationRequest.setInterval(1000);
-        inLocationRequest.setFastestInterval(1000);
+  public void onConnected(Bundle bundle) {
+       inLocationRequest = new LocationRequest();
+       inLocationRequest.setInterval(1000);
+       inLocationRequest.setFastestInterval(1000);
         inLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
-        LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
+       LocationServices.FusedLocationApi.requestLocationUpdates(inGoogleApiClient, inLocationRequest, this);
 
-        @Override
-        public void onConnectionSuspended ( int i){
+       @Override
+       public void onConnectionSuspended ( int i){
 
         }
 
-        @Override
-        public void onConnectionFailed (@NonNull ConnectionResult connectionResult){
+       @Override
+      public void onConnectionFailed (@NonNull ConnectionResult connectionResult){
 
         }
 
         @Override
         protected void onStop() {
             super.onStop();
-        }
+       }
 
-    }
+   }
 }

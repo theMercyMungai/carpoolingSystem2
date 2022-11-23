@@ -15,9 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
 
 public class login extends AppCompatActivity {
     private EditText inemail, inpassword;
@@ -38,7 +35,7 @@ public class login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if(user!=null){
-                    Intent intent = new Intent(login.this, DriverMapActivity.class);
+                    Intent intent = new Intent(login.this, DriverMapActivity2.class);
                     startActivity(intent);
                     finish();
                     return;
@@ -74,7 +71,7 @@ public class login extends AppCompatActivity {
                         if(!task.isSuccessful()) {
                             Toast.makeText(login.this, "user does not exist", Toast.LENGTH_SHORT).show();
                         }else{
-                            Intent intent = new Intent(login.this,DriverMapActivity.class);
+                            Intent intent = new Intent(login.this, DriverMapActivity2.class);
                             startActivity(intent);
                         }
                     }

@@ -34,7 +34,7 @@ public class adminLogin extends AppCompatActivity {private EditText inemail, inp
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if(user!=null){
-                    Intent intent = new Intent(adminLogin.this, DriverMapActivity.class);
+                    Intent intent = new Intent(adminLogin.this, DriverMapActivity2.class);
                     startActivity(intent);
                     finish();
                     return;
@@ -70,7 +70,7 @@ public class adminLogin extends AppCompatActivity {private EditText inemail, inp
                         if(!task.isSuccessful()) {
                             Toast.makeText(adminLogin.this, "user does not exist", Toast.LENGTH_SHORT).show();
                         }else{
-                            Intent intent = new Intent(adminLogin.this,DriverMapActivity.class);
+                            Intent intent = new Intent(adminLogin.this, DriverMapActivity2.class);
                             startActivity(intent);
                         }
                     }
